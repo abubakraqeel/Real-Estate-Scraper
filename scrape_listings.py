@@ -36,9 +36,10 @@ for link in listings_links:
     name.append(link_name.text)
     rent.append(link_rent.text)
 
-listings_dict = {"Name": name, "Type": type, "Rent": rent, "Size": size}
+listings_dict = {"Name": name, "Type": type, "Rent": rent, "Size": size, "Link": listings_links}
 df = pd.DataFrame(listings_dict)
-print(df)
+df.to_csv("listings.csv")
+
 
 
 
